@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/
+
+# Allure
+allure-results/
+allure-report/
+
+# Screenshots & traces
+screenshots/
+traces/
+
+# Reports
+reports/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# IntelliJ
+.idea/
+
+# Coverage
+coverage/
+
+# Build
+dist/
+build/
+out/
+
+# TypeScript
+*.tsbuildinfo
