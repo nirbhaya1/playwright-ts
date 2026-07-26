@@ -9,3 +9,14 @@ test ('Valid login', async ({ loginPage }) => {
   await expect(loginPage.page).toHaveURL(urls.inventory);
 }
 );
+
+test ('Invalid login', async ({loginPage}) => {
+    await loginPage.goto(urls.login);
+    await loginPage.login(config.invalidUsername, config.invalidPassword);
+    await loginPage.page.waitForTimeout(5000);
+    const msg = await loginPage.getinvalidLoginMessage();
+    console.log("meg:",msg)
+    await expect(msg).toBe('Epic sadface: Username and password do not match any user in this service');
+}
+
+);

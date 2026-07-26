@@ -7,6 +7,7 @@ export class LoginPage {
     readonly usernameInput : Locator;
     readonly passwordInput : Locator;
     readonly loginButton : Locator;
+    readonly errorMessage : Locator;
 
 constructor (page : Page)
 {
@@ -14,6 +15,7 @@ constructor (page : Page)
         this.usernameInput=page.locator('#user-name');
         this.passwordInput=page.locator('#password');
         this.loginButton=page.locator('#login-button');
+        this.errorMessage = page.locator('//h3[@data-test="error"]');
 }
 
     async goto(url : string){
@@ -25,6 +27,10 @@ constructor (page : Page)
         await this.usernameInput.fill(username)
         await this.passwordInput.fill(password)
         await this.loginButton.click()
+    }
+
+    async getinvalidLoginMessage() {
+        return await this.errorMessage.innerText();
     }
 
 
