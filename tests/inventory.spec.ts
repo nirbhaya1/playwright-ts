@@ -27,9 +27,7 @@ test ('Sort name (A to Z)', async ({loginPage,inventoryPage}) =>{
     console.log(firstItemDes)
     expect(firstItem).toContain('Sauce Labs Backpack');
     expect(firstItemDes).toContain('carry.allTheThings() with the sleek');
-}
-
-);
+});
 
 test ('Sort name (Z to A)', async ({inventoryPage,loginPage}) =>{
     await loginPage.goto(urls.login);
@@ -42,9 +40,23 @@ test ('Sort name (Z to A)', async ({inventoryPage,loginPage}) =>{
     console.log(firstItemDes)
     expect(firstItemDes).toContain('This classic Sauce Labs t-shirt');
     
-}
+});
 
-);
+test ('Sort price (low to high)', async ({inventoryPage,loginPage}) =>{
+    await loginPage.goto(urls.login);
+    await loginPage.login(config.username, config.password);
+    await inventoryPage.sortBy('lohi');
+    const firstItem = await inventoryPage.getFirstItemName();
+    expect(firstItem).toContain('Sauce Labs Onesie');
+});
 
+
+test ('Sort price (high to low)', async ({inventoryPage,loginPage}) =>{
+    await loginPage.goto(urls.login);
+    await loginPage.login(config.username, config.password);
+    await inventoryPage.sortBy('hilo');
+    const firstItem = await inventoryPage.getFirstItemName();
+    expect(firstItem).toContain('Sauce Labs Fleece Jacket');
+});
 
 
