@@ -53,26 +53,40 @@ playwright-framework/
 
 
 2. Install dependencies:
-npm install
-npx playwright install --with-deps
+   ```bash
+   npm install
+   npx playwright install --with-deps
+
+
 
 3. Configure environment variables in .env:
-BASE_URL=https://www.saucedemo.com
-USERNAME=standard_user
-PASSWORD=secret_sauce
+   ```bash
+   BASE_URL=https://www.saucedemo.com
+   USERNAME=standard_user
+   PASSWORD=secret_sauce
 
 
 4. Run all tests:
-npx playwright test
+   ```bash
+   npx playwright test
 
 5. Run a specific file:
-npx playwright test login.spec.ts
+   ```bash
+   npx playwright test login.spec.ts
 
 6. Run a specific test case:
-npx playwright test -g "Valid login"
+   ```bash
+   npx playwright test -g "Valid login"
 
 7. HTML report
-npx playwright show-report
+   ```bash
+   npx playwright show-report
+
+
+8. 👨‍💻 Author
+   Developed by Nirbhaya Maheshwari  
+   Automation Developer | Java, Selenium, Playwright, CI/CD
+   
 
 
 
