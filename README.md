@@ -7,6 +7,7 @@ It is designed for industrial use, supporting data‑driven tests, reporting, sc
 
 ## 📂 Project Structure
 
+```bash
 playwright-framework/
 │
 ├── .github/workflows/playwright.yml   # GitHub Actions workflow
