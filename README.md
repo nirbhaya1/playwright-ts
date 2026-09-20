@@ -48,39 +48,32 @@ playwright-framework/
 ## 🚀 Setup
 
 1. Clone the repository:
-   ```bash
    git clone https://github.com/<your-username>/<your-repo>.git
    cd playwright-framework
 
 
 2. Install dependencies:
-   ```bash
    npm install
    npx playwright install --with-deps
 
 
 
 3. Configure environment variables in .env:
-   ```bash
    BASE_URL=https://www.saucedemo.com
    USERNAME=standard_user
    PASSWORD=secret_sauce
 
 
 4. Run all tests:
-   ```bash
    npx playwright test
 
 5. Run a specific file:
-   ```bash
    npx playwright test login.spec.ts
 
 6. Run a specific test case:
-   ```bash
    npx playwright test -g "Valid login"
 
 7. HTML report
-   ```bash
    npx playwright show-report
 
 
